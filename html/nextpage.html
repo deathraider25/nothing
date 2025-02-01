@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Day - You're My Valentine</title>
+    <style>
+        /* Overall background color */
+        body {
+            background: #f8c8d1; /* Soft pink background */
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Cloud shape for the text */
+        .cloud {
+            background: #f7b8d3; /* Soft pastel pink color for cloud */
+            border-radius: 50%;
+            padding: 20px;
+            width: 60%;
+            margin: 100px auto;
+            text-align: center;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            font-family: 'Arial', sans-serif;
+            font-size: 18px;
+            position: relative;
+            z-index: 10;
+            animation: moveCloud 10s infinite;
+        }
+
+        /* Keyframes for cloud movement */
+        @keyframes moveCloud {
+            0% { transform: translateX(0); }
+            50% { transform: translateX(10px); }
+            100% { transform: translateX(0); }
+        }
+
+        /* Floating hearts around the page */
+        .heart {
+            position: absolute;
+            font-size: 30px;
+            animation: floatHearts 5s infinite;
+            color: #ff80ab; /* Lighter pink hearts */
+            z-index: 1;
+        }
+
+        @keyframes floatHearts {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0); }
+        }
+
+        /* Floating images */
+        .floating-image {
+            position: absolute;
+            width: 150px; /* All images have same size */
+            animation: floatImages 12s infinite;
+            z-index: 1;
+        }
+
+        /* Keyframes for image floating animation */
+        @keyframes floatImages {
+            0% { transform: translateY(0) rotate(0); }
+            25% { transform: translateY(-40px) rotate(10deg); }
+            50% { transform: translateY(0) rotate(0); }
+            75% { transform: translateY(40px) rotate(-10deg); }
+            100% { transform: translateY(0) rotate(0); }
+        }
+
+        /* Heart shape positioning for images */
+        .heart-shape {
+            position: relative;
+            margin-top: 100px;
+            width: 200px;
+            height: 200px;
+            z-index: 1;
+            background-color: transparent;
+        }
+
+        /* Floating heart elements */
+        .floating-heart {
+            position: absolute;
+            font-size: 25px;
+            animation: heartAnimation 5s infinite;
+            color: #ff80ab;
+            z-index: 1;
+        }
+
+        @keyframes heartAnimation {
+            0% { transform: translateY(0) rotate(0); }
+            50% { transform: translateY(-10px) rotate(45deg); }
+            100% { transform: translateY(0) rotate(0); }
+        }
+
+        /* Ensure images and hearts don’t overlap in a messy way */
+        .floating-image:nth-child(odd) {
+            animation-duration: 15s;
+        }
+
+        .floating-heart:nth-child(odd) {
+            animation-duration: 6s;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cloud with the text -->
+    <div class="cloud">
+        <p>
+            I knew there was no way you could say no to being my Valentine, my cutu! 💖💫 
+            I’m so grateful you said yes. Together, we’ll turn this relationship into something truly special, 
+            and no kalesh will ever pull us apart. You mean everything to me, and I love you more than words can say. 💖💘💞
+        </p>
+    </div>
+
+    <!-- Floating images throughout the page -->
+    <img src="images/photo1.jpg" alt="photo1" class="floating-image" style="top: 10%; left: 5%; transform: translateX(-50%);">
+    <img src="images/photo2.jpg" alt="photo2" class="floating-image" style="top: 30%; left: 70%; transform: translateX(-50%);">
+    <img src="images/photo3.jpg" alt="photo3" class="floating-image" style="top: 50%; left: 15%; transform: translateX(-50%);">
+    <img src="images/photo4.jpg" alt="photo4" class="floating-image" style="top: 70%; left: 50%; transform: translateX(-50%);">
+
+    <!-- Floating Hearts -->
+    <div class="heart" style="top: 10%; left: 10%;">💖</div>
+    <div class="heart" style="top: 20%; left: 40%;">💘</div>
+    <div class="heart" style="top: 60%; left: 80%;">💞</div>
+    <div class="heart" style="top: 70%; left: 30%;">💖</div>
+
+</body>
+</html>
